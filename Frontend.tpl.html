@@ -1,0 +1,261 @@
+    <HTML>
+    <HEAD>
+      <TITLE>MDB Manager</TITLE>
+      <link rel="stylesheet" type="text/css" href="Frontend.css"></link>
+    </HEAD>
+    <BODY bgcolor="#f5f5f5" leftmargin="0" topmargin="0">
+    <TABLE border="0">
+    <TR>
+      <TD width="200" valign="top">
+        <a class="item" href="Frontend.php"><span class="heada"><b>Home</b></span></a><br><br>
+        <span class="heada"><b><u>Existing Database:</u></b></span><br /><br />
+        <!-- BEGIN Navi_Databases -->
+          <a class="item" href="Frontend.php?db={Left_DBName}">
+            <span class="heada"><b>{Navi_Databases_DBName}</b></span>
+          </a><br>
+          <!-- BEGIN Navi_Databases_Tables -->
+            <img src="browse.gif" border="0">
+            <a class="tblitem" href="Frontend.php?db={Navi_Databases_Tables_DBName}&table={Navi_Databases_Tables_TableName}">{Navi_Databases_Tables_TableName}</a><br>
+          <!-- END Navi_Databases_Tables -->
+        <!-- END Navi_Databases -->
+        <br>
+        <span class="heada"><b><u>Database Schemas:</u></b></span><br /><br />
+        <!-- BEGIN Navi_Schemas -->
+          <a class="item" href="Frontend.php?viewdump={Navi_Schemas_Filename}"><span class="heada">{Navi_Schemas_Filename} <span style="font-size:10px">({Navi_Schemas_Size} kb)</span></span></a><br>
+        <!-- END Navi_Schemas -->
+      </TD>
+      <TD width="20" valign="top">
+      </TD>
+      <TD valign="top">
+        <!-- BEGIN Database_Detail -->
+          <table border="0" class="tablemain">
+          <TR>
+            <TD colspan="5" class="tableheader">
+              <span class="titlemini">database {Database_Detail_DBName}</span>
+            </TD>
+          </TR>
+          <TR>
+            <TD colspan="5">
+            </TD>
+          </TR>
+          <tr>
+            <td class="tableheader" width="100">table</td>
+            <td class="tableheader" colspan="3">options</td>
+            <td class="tableheader" width="80">entries</td>
+          </tr>
+          <!-- BEGIN Database_Detail_Table -->
+            <TR>
+              <TD class="tablebody">
+                <span class="fieldname">{Database_Detail_Table_TableName}</span><br>
+              </TD>
+              <TD class="tablebody">
+                <a href="Frontend.php?db={Database_Detail_Table_DBName}&amp;table={Database_Detail_Table_TableName}&amp;action=show&amp;new=1" class="detaillink">
+                  <span class="fieldtype">show</span>
+                </a><br />
+              </TD>
+              <TD class="tablebody">
+                <a href="Frontend.php?db={Database_Detail_Table_DBName}&amp;table={Database_Detail_Table_TableName}" class="detaillink">
+                  <span class="fieldtype">details</span>
+                </a><br />
+              </TD>
+              <TD class="tablebody">
+                <a href="Frontend.php?db={Database_Detail_Table_DBName}&amp;table={Database_Detail_Table_TableName}" class="detaillink">
+                  <span class="fieldtype">drop</span>
+                </a><br />
+              </TD>
+              <TD class="tablebody">
+                <span class="fieldtype">{Database_Detail_Table_Entries}</span><br>
+              </TD>
+            </TR>
+          <!-- END Database_Detail_Table -->
+          </TABLE>
+        <!-- END Database_Detail -->
+        
+        <!-- BEGIN Table_Detail -->
+          <table border="0" class="tablemain" width="500">
+          <tr>
+            <td class="tablebody" align="center">
+              <a href="Frontend.php?db={Table_Detail_DBName}&amp;table={Table_Detail_TableName}&amp;action=show&amp;new=1" class="detaillink">
+                <span class="fieldtype">show</span>
+              </a><br />
+            </td>
+            <td class="tablebody" align="center">
+              <a href="Frontend.php?db={Table_Detail_DBName}&amp;table={Table_Detail_TableName}&amp;action=show&amp;new=1" class="detaillink">
+                <span class="fieldtype">select</span>
+              </a><br />
+            </td>
+            <td class="tablebody" align="center">
+              <a href="Frontend.php?db={Table_Detail_DBName}&amp;table={Table_Detail_TableName}&amp;action=show&amp;new=1" class="detaillink">
+                <span class="fieldtype">insert</span>
+              </a><br />
+            </td>
+            <td class="tablebody" align="center">
+              <a href="Frontend.php?db={Table_Detail_DBName}&amp;table={Table_Detail_TableName}&amp;action=show&amp;new=1" class="detaillink">
+                <span class="fieldtype">drop</span>
+              </a><br />
+            </td>
+            <td class="tablebody" align="center">
+              <a href="Frontend.php?db={Table_Detail_DBName}&amp;table={Table_Detail_TableName}&amp;action=show&amp;new=1" class="detaillink">
+                <span class="fieldtype">empty</span>
+              </a><br />
+            </td>
+          </tr>
+          </TABLE><br>
+          <table border="0" class="tablemain" width="500">
+          <TR>
+            <TD colspan="4" class="tableheader">
+              <span class="titlemini">table {Table_Detail_TableName}</span>
+            </TD>
+          </TR>
+          <TR>
+            <TD colspan="4">
+            </TD>
+          </TR>
+          <tr>
+            <td class="tableheader" width="100">field</td>
+            <td class="tableheader" width="80">type</td>
+            <td class="tableheader" width="30">default</td>
+            <td class="tableheader" width="30">notnull</td>
+          </tr>
+          <!-- BEGIN Table_Detail_Field -->
+            <TR>
+              <TD class="tablebody">
+                <span class="fieldname">{Table_Detail_Field_FieldName}</span><br>
+              </TD>
+              <TD class="tablebody">
+                <span class="fieldtype">{Table_Detail_Field_FieldType}</span><br>
+              </TD>
+              <TD class="tablebody">
+                <span class="fielddefault">{Table_Detail_Field_FieldDefault}</span><br>
+              </TD>
+              <TD class="tablebody">
+                <span class="fieldnotnull">{Table_Detail_Field_FieldNotnull}</span><br>
+              </TD>
+            </TR>
+          <!-- END Table_Detail_Field -->
+          </TABLE>
+        <!-- END Table_Detail -->
+        
+        <!-- BEGIN Table_Content -->
+          <TABLE border="0" class="tablemain" width="700">
+          <TR>
+            <TD colspan="60" class="tableheader">
+              <span class="titlemini">table {Table_Content_TableName}</span>
+            </TD>
+          </TR>
+          <TR>
+            <TD colspan="60">
+            </TD>
+          </TR>
+          <TR>
+            <TD colspan="60" class="tableheader" align="center">
+              <TABLE border="0" width="100%" class="tablemain" cellspacing="0" cellpadding="0">
+              <TR>
+                <TD align="left" width="50">
+                  {Table_Content_Prev}
+                </TD>
+                <TD align="center" class="tableheader">
+                  <span class="fieldtype" align="center">
+                    {Table_Content_From} - {Table_Content_To} of {Table_Content_Entries}
+                  </span>
+                </TD>
+                <TD align="right" width="50">
+                  {Table_Content_Next}
+                </TD>
+              </TR>
+              </TABLE>
+            </TD>
+          </TR>
+          <tr>
+            <!-- BEGIN Table_Content_FieldHeader -->
+              <td class="tableheader">
+                <a href="{Table_Content_FieldHeader_Link}" class="detaillink">
+                  {Table_Content_FieldHeader_Name}
+                </a>
+              </td>
+            <!-- END Table_Content_FieldHeader -->
+          </tr>
+          <!-- BEGIN Table_Content_Row -->
+            <TR>
+              <!-- {Table_Content_Row_Nr} -->
+              <!-- BEGIN Table_Content_Field -->
+                <TD class="tablebody" valign="top">
+                  <span class="fieldtype">{Table_Content_Field}</span><br>
+                </TD>
+              <!-- END Table_Content_Field -->
+            </TR>
+          <!-- END Table_Content_Row -->
+          </TABLE>
+        <!-- END Table_Content -->
+        
+        <!-- BEGIN DumpDB -->
+          <FORM action="Dump.php" method="GET">
+          <input type="hidden" name="db" value="{DumpDB_DBName}">
+          <table border="0" class="tablemain">
+          <TR>
+            <TD colspan="5" class="tableheader">
+              <span class="titlemini">database {DumpDB_DBName} - Dump to XML</span>
+            </TD>
+          </TR>
+          <TR>
+            <TD class="tableheader">
+              Filename:
+            </TD>
+            <TD class="tablebody">
+              <input type="text" name="filename" value="{DumpDB_DBName}_dump.xml" size="30">
+            </TD>
+          </TR>
+          <TR>
+            <TD class="tableheader" valign="top">
+              What:
+            </TD>
+            <TD class="tablebody">
+              <input type="radio" name="what" value="structure"> <span class="fielddefault">Structure</span><br>
+              <input type="radio" name="what" value="data"> <span class="fielddefault">Data</span><br>
+              <input type="radio" name="what" value="both" checked> <span class="fielddefault">Structure &amp; Data</span>
+            </TD>
+          </TR>
+          <TR>
+            <TD colspan="2" class="tableheader" align="right">
+              <input type="submit" value="Dump">
+            </TD>
+          </TR>
+          </TABLE>
+          </FORM>
+        <!-- END DumpDB -->
+
+        <!-- BEGIN DumpFile -->
+          {DumpFile_Data}
+          <FORM action="Update.php" method="GET">
+          <input type="hidden" name="filename" value="{DumpFile_Filename}">
+          <table class="tablemain" width="400">
+          <TR>
+            <TD colspan="2" class="tableheader">
+              <span class="titlemini">{DumpFile_Filename} - Create from XML</span>
+            </TD>
+          </TR>
+          <TR>
+            <TD colspan="2" class="tableheader">
+            </TD>
+          </TR>
+          <TR>
+            <TD class="tableheader">
+              Databasename:
+            </TD>
+            <TD class="tablebody">
+              <input type="text" name="dbname" value="MDB_DB" size="30">
+            </TD>
+          </TR>
+          <TR>
+            <TD colspan="2" class="tableheader" align="right">
+              <input type="submit" value="Update">
+            </TD>
+          </TR>
+          </TABLE>
+          </FORM>
+        <!-- END DumpFile -->
+      </TD>
+    </TR>
+    </TABLE>
+</BODY>
+</HTML>

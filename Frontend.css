@@ -1,0 +1,16 @@
+body {font-family: verdana, helvetica, arial, geneva, sans-serif; font-size: 12 px}
+div {color: #000000}
+.heada {font-family: verdana, helvetica, arial, geneva, sans-serif; font-size: 13 px; color: #000000}
+.item, .item:active, .item:hover, .tblItem, .tblItem:active {font-family: verdana, helvetica, arial, geneva, sans-serif; font-size: 12 px; color: #333399; text-decoration: none}
+.tblItem:hover {color: #FF0000; text-decoration: underline}
+
+.fieldname {font-family: verdana, helvetica, arial, geneva, sans-serif; font-size: 11 px; color: #333399; text-decoration: none}
+.fieldtype .fieldefault .fieldnotnull{font-family: verdana, helvetica, arial, geneva, sans-serif; font-size: 11 px; color: #555555; text-decoration: none}
+
+.detaillink {font-family: verdana, helvetica, arial, geneva, sans-serif; font-size: 11 px; color: #555555; text-decoration: none}
+
+.titlemini { font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; color: rgb(103, 103, 103); text-decoration: none; letter-spacing: 1px; line-height: 95%; }
+.textmini { font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; color: rgb(133, 133, 133); text-decoration: none; }
+.tablemain { border: solid 0px; margin: solid 0px; }
+.tableheader { padding: 3px; border: solid 0px; margin: 0px; background-color: rgb(235, 235, 235); font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: rgb(133, 133, 133); font-weight: bold; text-decoration: none; }
+.tablebody { padding: 3px; border-top: solid 1px; border-left: solid 1px; border-bottom: solid 1px; border-right: solid 1px; border-color: rgb(210, 210, 210); margin: solid 0px; font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: rgb(133, 133, 133); text-decoration: none; }
